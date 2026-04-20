@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const API_URL = 'https://seo-audit-server-production.up.railway.app/api/audit';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api/audit';
 
 function AuditField({ label, value }) {
   const ok = value != null && String(value).trim() !== '';
